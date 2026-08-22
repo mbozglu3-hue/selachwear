@@ -20,9 +20,9 @@
     </nav>
 
     <section class="product-detail">
-
-        <div class="product-detail-image">
-            <img src="tshirt.png" alt="Selachwear T-Shirt">
+         <div class="product-detail-image" id="productImage">
+    <img id="frontImage" src="tshirt.png" alt="T-Shirt ön">
+    <img id="backImage" src="thsirt3.jpeg" alt="T-Shirt arka">
         </div>
 
         <div class="product-center">
@@ -33,7 +33,7 @@
         <div class="product-info">
             <h1>Selachwear T-Shirt</h1>
 
-            <p class="price">600 TL</p>
+            <p class="price">800 TL</p>
 
             <p>
                 Selachwear yeni koleksiyonundan
@@ -54,4 +54,26 @@
     </section>
 
 </body>
+<script>
+const productImage = document.getElementById("productImage");
+const frontImage = document.getElementById("frontImage");
+const backImage = document.getElementById("backImage");
+
+productImage.addEventListener("touchend", function (e) {
+    e.preventDefault();
+
+    if (backImage.style.display === "block") {
+        backImage.style.display = "none";
+        backImage.style.opacity = "0";
+
+        frontImage.style.display = "block";
+        frontImage.style.opacity = "1";
+    } else {
+        frontImage.style.display = "none";
+
+        backImage.style.display = "block";
+        backImage.style.opacity = "1";
+    }
+});
+</script>
 </html>
