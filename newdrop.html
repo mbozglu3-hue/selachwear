@@ -20,9 +20,9 @@
 
     <section class="product-detail">
 
-   <div class="product-detail-image" id="productImage">
-    <img src="thsirt2.png" alt="T-Shirt ön">
-    <img src="tshirt2.jpeg" alt="T-Shirt arka" class="back-image">
+  <div class="product-detail-image" id="productImage">
+    <img id="frontImage" src="thsirt2.png" alt="T-Shirt ön">
+    <img id="backImage" src="tshirt2.jpeg" alt="T-Shirt arka">
 </div>
         <div class="product-center">
             <p>SELACHWEAR</p>
@@ -50,11 +50,30 @@
             </a>
         </div>
         </section>
-        <script>
-const productImage = document.getElementById("productImage");
+        </div>
+    </section>
 
-productImage.addEventListener("click", function () {
-    this.classList.toggle("show-back");
+<script>
+const productImage = document.getElementById("productImage");
+const frontImage = document.getElementById("frontImage");
+const backImage = document.getElementById("backImage");
+
+productImage.addEventListener("touchend", function (e) {
+    e.preventDefault();
+
+    if (backImage.style.display === "block") {
+        backImage.style.display = "none";
+        backImage.style.opacity = "0";
+
+        frontImage.style.display = "block";
+        frontImage.style.opacity = "1";
+    } else {
+        frontImage.style.display = "none";
+
+        backImage.style.display = "block";
+        backImage.style.opacity = "1";
+    }
 });
 </script>
 </body>
+</html>
