@@ -341,3 +341,56 @@ nav a:hover {
     margin: 25px 0;
     letter-spacing: 3px;
 }
+.side-product{
+    width: 250px;
+    margin-left: 80%;
+    margin-right: 50px;
+    margin-top: -1000px;
+    text-align: center;
+    }
+    .side-image{
+    width: 250px;
+    height: auto;
+}
+.side-image {
+    transition: 0.3s;
+
+    }
+    .side-image:hover {
+        transform: scale(1.08);
+        }
+        .side-product p{
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        }
+.product-detail-image{
+position: relative;
+width: 400px;
+}
+.product-detail-image img {
+ }
+ 
+ .product-detail-image .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    }
+    
+    .product-detail-image:hover .back-image {
+    opacity: 1;
+}
+    @media (max-widht: 768px) {
+        body}
+        .product-detail-image{
+            width: 90%;
+            margin: 0 auto;
+
+    }
+    .product-detail {
+        flex-direction: column;
+       } 
+        
