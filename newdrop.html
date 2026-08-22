@@ -50,15 +50,11 @@
             </a>
         </div>
         </section>
-</body>
-<script>
+        <script>
 const productImage = document.getElementById("productImage");
 
-if (window.matchMedia("(max-width: 768px)").matches) {
-
-    productImage.addEventListener("click", function () {
-        this.classList.toggle("show-back");
-    });
-
-}
+productImage.addEventListener("click", function () {
+    this.classList.toggle("show-back");
+});
 </script>
+</body>
