@@ -54,7 +54,11 @@
 <script>
 const productImage = document.getElementById("productImage");
 
-productImage.addEventListener("click", function () {
-    this.classList.toggle("show-back");
-});
+if (window.matchMedia("(max-width: 768px)").matches) {
+
+    productImage.addEventListener("click", function () {
+        this.classList.toggle("show-back");
+    });
+
+}
 </script>
