@@ -20,7 +20,7 @@
 
     <section class="product-detail">
 
-        <div class="product-detail-image">
+        <div class="product-detail-image" id="productImage"
             <img src="thsirt2.png" alt="Selachwear T-Shirt ön">
             <img src="tshirt2.jpeg" alt="Selachwear T-Shirt arka" class="back-image">
         </div>
@@ -52,4 +52,10 @@
         </div>
         </section>
 </body>
-</html>
+<script>
+const productImage = document.getElementById("productImage");
+
+productImage.addEventListener("click", function () {
+    productImage.classList.toggle("show-back");
+});
+</script>
